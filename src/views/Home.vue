@@ -1,12 +1,23 @@
 <template>
   <div>
-    <h2>这里是首页</h2>
+    <button @click="btnDanmu">点击开始弹幕</button>
+    <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
+  data(){
+    return{
+      message:'zzz'
+    }
+  },
+  methods:{
+    btnDanmu() {
+      this.$router.push('/danmu')
+    }
+  }
 }
 </script>
 
